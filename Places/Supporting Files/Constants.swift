@@ -19,6 +19,10 @@ enum Constants {
     static let baseWeatherUrl                 = "https://samples.openweathermap.org/data/2.5/weather?"
     static let openWeatherAppID               = "712dd2d4cb961be01dcc92582a0fde59"
     
+    static let googlePlacesApiKey             =  "AIzaSyA_PN3lnS-fOpjasVMCtgXq-LaRQBcybDI"
+    
+    
+    
     enum Screen {
         static let width  = UIScreen.main.bounds.width
         static let height = UIScreen.main.bounds.height

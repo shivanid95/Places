@@ -28,6 +28,7 @@ class LocationDescriptionModelImplementation : LocationDescriptionModel {
         return str
     }
     
+    // returns weather data by calling api 
     func fetchWeatherData( latitude : Double , longitude : Double , completionHandler : @escaping (WeatherData?) -> Void ) {
         
         if  let url = URL(string: getUrlString(lat: latitude, long: longitude)) {

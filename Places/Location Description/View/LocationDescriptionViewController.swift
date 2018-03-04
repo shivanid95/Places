@@ -94,6 +94,7 @@ class LocationDescriptionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK : - Actions
     
     @IBAction func didTapShowOnMap(_ sender: UIButton) {
         let mapViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Constants.mapViewControllerNibName) as! MapViewController
@@ -101,7 +102,7 @@ class LocationDescriptionViewController: UIViewController {
         show(mapViewController, sender: self)
     }
     
-    
+    //MARK: - Helper Methods
     func loadImageFromURL(imageURL: String ,completionHandler : @escaping(UIImage?)->Void) {
         if let url = URL(string: imageURL) {
             do {
@@ -116,9 +117,9 @@ class LocationDescriptionViewController: UIViewController {
         }
     }
 }
-
+//MARK: - Location Description View Delegate
 extension LocationDescriptionViewController : LocationDescriptionViewDelegate , Loadable {
-    
+    //Refresh views when data changes
     func refreshViews() {
         pressureValueLabel.text = "\(viewModel?.weatherData?.pressure ?? 0)"
         humidityValueLabel.text = "\(viewModel?.weatherData?.humidity ?? 0 )"
