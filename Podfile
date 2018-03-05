@@ -13,6 +13,9 @@ pod 'Firebase/Database'
 pod 'Alamofire'
 pod 'AlamofireObjectMapper'
 pod 'GoogleMaps'
+pod 'GooglePlaces'
+pod 'SwiftyJSON'
+ pod 'MJSnackBar'
 
   target 'PlacesTests' do
     inherit! :search_paths
